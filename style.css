@@ -106,7 +106,7 @@ img{
     padding: 5rem 0 2rem;
 }
 
-.section-title{
+.section__title{
     position: relative;
     font-size: var(--big-font-size);
     margin-bottom: var(--mb-5);
@@ -133,8 +133,9 @@ img{
     max-width: 1024px;
     column-gap: 2rem;
     width: calc(100% - 2rem);
-    margin-left: var(--mb-2);
-    margin-right: var(--mb-2);
+    /* margin-left: var(--mb-2);
+    margin-right: var(--mb-2); */
+    margin: 0 auto;
 }
 
 .l-header{
@@ -145,6 +146,7 @@ img{
     left: 0;
     z-index: var(--z-fixed);
 }
+
 
 /* Nav */
 
@@ -202,4 +204,243 @@ img{
 .scroll-header{
     background-color: var(--white-color);
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Home */
+.home{
+    background-color: var(--dark-color-lighten);
+    overflow: hidden;
+}
+
+.home__container{
+    height: calc(100vh - var(--header-height));
+}
+
+.home__sneaker{
+    display: flex;
+    position: relative;
+    align-self: center;
+    justify-content: center;
+}
+
+.home__shape{
+    width: 220px;
+    height: 220px;
+    background-color: var(--dark-color);
+    border-radius: 50%;
+}
+
+.home__img{
+    position: absolute;
+    top: 1.5rem;
+    width: 275px;
+    max-width: initial;
+    transform: var(--rotate-img);
+}
+
+.home__new{
+    display: block;
+    font-size: var(--small-font-size);
+    font-weight: var(--font-semi-bold);
+    margin-bottom: var(--mb-2);
+}
+
+.home__title{
+    font-size: var(--bigger-font-size);
+    margin-bottom: var(--mb-1);
+}
+
+.home__description{
+    margin-bottom: var(--mb-6);
+}
+
+/* Button */
+.button{
+    display: inline-block;
+    padding: 1.125rem 2rem;
+    background-color: var(--dark-color);
+    color: var(--white-color);
+    border-radius: 0.5rem;
+    transition: 0.3s;
+}
+
+.button:hover{
+    transform: translateY(-0.25rem);
+}
+
+.button-light{
+    display: inline-flex;
+    align-items: center;
+    font-weight: var(--font-bold);
+    color: var(--dark-color);
+
+}
+
+.button-light .button-icon{
+    font-size: 1.25rem;
+    margin-left: 0.2rem;
+    transition: 0.3s;
+}
+
+.button-light:hover .button-icon{
+    margin-left: 0.4rem;
+}
+
+/* === Featured === */
+
+.featured__container{
+    row-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.sneaker{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background-color: var(--dark-color-lighten);
+    border-radius: 0.5rem;
+    transition: 0.3s;
+}
+
+.sneaker:hover{
+    box-shadow: 0 2px 15px rgba(0,0,0,0.3);
+    transform: translateY(-.2rem);
+}
+
+.sneaker__sale{
+    background-color: var(--dark-color);
+    color: var(--white-color);
+    padding: 0.25rem 0.5rem;
+    position: absolute;
+    border-radius: 0.25rem;
+    left: 0.5rem;
+    font-size: var(--h2-font-size);
+    transform: rotate(-90deg);
+    letter-spacing: 0.1rem;
+}
+
+.sneaker__img{
+    margin-top: var(--mb-2);
+    margin-bottom: var(--mb-5);
+    transform: var(--rotate-img);
+    filter: drop-shadow(0 12px 8px rgba(0,0,0,0.2));
+}
+
+.sneaker__name, .sneaker__price{
+    font-weight: var(--font-semi-bold);
+    font-size: var(--h2-font-size);
+    letter-spacing: 0.1rem;
+}
+
+.sneaker__name{
+    margin-bottom: var(--mb-1);
+}
+
+.sneaker__price{
+    margin-bottom: var(--mb-4);
+}
+
+/* Collection */
+
+.collection__container{
+    row-gap: 2rem;
+    justify-content: center;
+}
+
+.collection__card{
+    height: 328px;
+    display: flex;
+    position: relative;
+    background-color: var(--dark-color-lighten);
+    border-radius: 0.5rem;
+    padding: 2rem;
+    transition: .3s;
+}
+
+.collection__card:hover{
+    transform: translateY(-.5rem);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.collection__data{
+    align-self: flex-end;
+}
+
+.collection__img{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 230px;
+}
+
+.collection__name{
+    font-size: var(--bigger-font-size);
+    margin-bottom: 0.25rem;
+}
+
+.collection__description{
+    margin-bottom: var(--mb-2);
+}
+
+/* Women Sneakers */
+.women__container{
+    row-gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+/* Offer */
+.offer_container{
+    grid-template-columns: 55% 45%;
+    column-gap: 0;
+    background-color: var(--dark-color-lighten);
+    border-radius: 0.5rem;
+    justify-content: center;
+}
+
+.offer_data{
+    padding: 4rem 0 4rem 1.5rem;
+}
+
+.offer__title{
+    font-size: var(--bigger-font-size);
+    margin-bottom: var(--mb-1);
+}
+
+.offer__description{
+    margin-bottom: var(--mb-3);
+}
+
+.offer__img{
+    width: 153px;
+}
+
+/* New Collection */
+.new__container{
+    row-gap: 2rem;
+}
+
+.new__mens{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--dark-color-lighten);
+    border-radius: 0.5rem;
+    padding: 2rem;
+}
+
+.new__mens-img{
+    width: 276px;
+    margin-bottom: var(--mb-2);
+}
+
+.new__title{
+    font-size: var(--bigger-font-size);
+    margin-bottom: 0.25rem;
+}
+
+.new__price{
+    margin-bottom: var(--mb-3);
+    display: block;
 }
